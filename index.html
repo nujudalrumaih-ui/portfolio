@@ -23,8 +23,8 @@
   .ig-panel h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; line-height: 1.25; margin: 0; }
   .ig-panel p { margin: 0; color: var(--muted); max-width: 44rem; }
   .ig-codes { display: flex; flex-direction: column; gap: 0.4rem; align-items: flex-start; }
-  .ig-code { display: block; max-width: 100%; overflow-x: auto; direction: ltr; text-align: left; font: 0.875rem var(--font-mono); background: #2B0F1C; color: #F6E3DA; border-radius: 10px; padding: 0.5rem 0.85rem; }
-  .ig-code::before { content: "> "; color: #C99AA8; }
+  .ig-code { display: block; max-width: 100%; overflow-x: auto; direction: ltr; text-align: left; font: 0.875rem var(--font-mono); background: #22223B; color: #F2E9E4; border-radius: 10px; padding: 0.5rem 0.85rem; }
+  .ig-code::before { content: "> "; color: #C9ADA7; }
   .ig-step { display: flex; gap: 0.6rem; }
   .ig-btn { font: 500 0.875rem var(--font-body); color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 999px; padding: 0.35rem 1rem; cursor: pointer; }
   .ig-btn:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); }
@@ -67,43 +67,43 @@
 <style>
   /* Layout: floating pill nav, a hero with drifting colour blobs and a rotating ring, a skills marquee, then soft cards: a dashboard in a window frame, a growing-line timeline, spotlight skill cards, a swipe rail of certificates and a big contact block. Bilingual with a real RTL switch. */
   :root {
-    --bg: #F2DACE;
-    --surface: #FAEEE7;
-    --fg: #35121F;
-    --muted: #6E4455;
-    --line: #DDB9AE;
-    --accent: #7C0E44;
-    --accent-ink: #FBF1EA;
-    --blob1: #D49A9A;
-    --blob2: #AA5E7A;
+    --bg: #F2E9E4;
+    --surface: #F8F2EE;
+    --fg: #22223B;
+    --muted: #4A4E69;
+    --line: #C9ADA7;
+    --accent: #4A4E69;
+    --accent-ink: #F2E9E4;
+    --blob1: #C9ADA7;
+    --blob2: #9A8C98;
     --font-display: "Bricolage Grotesque", "IBM Plex Sans Arabic", "Helvetica Neue", Arial, sans-serif;
     --font-body: "IBM Plex Sans", "IBM Plex Sans Arabic", "Helvetica Neue", Arial, sans-serif;
     --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #1E0A13;
-      --surface: #2B111C;
-      --fg: #F2DACE;
-      --muted: #CDA3A6;
-      --line: #4D2433;
-      --accent: #D49A9A;
-      --accent-ink: #1E0A13;
-      --blob1: #7C0E44;
-      --blob2: #8E4A66;
+      --bg: #22223B;
+      --surface: #F8F2EE;
+      --fg: #F2E9E4;
+      --muted: #9A8C98;
+      --line: #C9ADA7;
+      --accent: #C9ADA7;
+      --accent-ink: #22223B;
+      --blob1: #4A4E69;
+      --blob2: #9A8C98;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #1E0A13;
-    --surface: #2B111C;
-    --fg: #F2DACE;
-    --muted: #CDA3A6;
-    --line: #4D2433;
-    --accent: #D49A9A;
-    --accent-ink: #1E0A13;
-    --blob1: #7C0E44;
-    --blob2: #8E4A66;
+    --bg: #22223B;
+    --surface: #F8F2EE;
+    --fg: #F2E9E4;
+    --muted: #9A8C98;
+    --line: #C9ADA7;
+    --accent: #C9ADA7;
+    --accent-ink: #22223B;
+    --blob1: #4A4E69;
+    --blob2: #9A8C98;
     color-scheme: dark;
   }
 
@@ -320,7 +320,7 @@
     .menu { width: 2.75rem; height: 2.75rem; }
   }
   .socials { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-  .social { display: inline-flex; align-items: center; gap: 0.6rem; min-height: 44px; padding-block: 0.4rem; padding-inline: 0.5rem 1.2rem; background: #fff; color: #35121F; border-radius: 999px; text-decoration: none; font-weight: 500; transition: transform 0.2s; }
+  .social { display: inline-flex; align-items: center; gap: 0.6rem; min-height: 44px; padding-block: 0.4rem; padding-inline: 0.5rem 1.2rem; background: #fff; color: #22223B; border-radius: 999px; text-decoration: none; font-weight: 500; transition: transform 0.2s; }
   .social svg { width: 2rem; height: 2rem; flex: none; }
   .social:hover { transform: translateY(-2px); }
   .social { background: none; color: var(--accent-ink); padding-inline: 0 0.75rem; }
@@ -1392,6 +1392,28 @@
 })();
 </script>
 
+
+<style id="reference-theme-override">
+  :root, :root:not([data-theme="light"]), :root[data-theme="dark"] {
+    color-scheme: light;
+    --bg: #F2E9E4;
+    --surface: #F8F2EE;
+    --fg: #22223B;
+    --muted: #4A4E69;
+    --line: #C9ADA7;
+    --accent: #4A4E69;
+    --accent-ink: #F2E9E4;
+    --blob1: #C9ADA7;
+    --blob2: #9A8C98;
+  }
+  body { background: var(--bg); color: var(--fg); }
+  .contact { background: #22223B; color: #F2E9E4; }
+  .contact h2, .contact .label { color: #F2E9E4; }
+  .btn.fill, .lang, .totop { background: #22223B; color: #F2E9E4; border-color: #22223B; }
+  .btn.ghost { color: #4A4E69; border-color: #9A8C98; }
+  .chip, .card, .window, .nav, .marquee, .idcard { background-color: #F8F2EE; }
+  .social { color: #22223B; }
+</style>
 </body></html>"></iframe>
   </section>
 
@@ -1683,4 +1705,26 @@
   top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 })();
 </script>
+
+<style id="reference-theme-override">
+  :root, :root:not([data-theme="light"]), :root[data-theme="dark"] {
+    color-scheme: light;
+    --bg: #F2E9E4;
+    --surface: #F8F2EE;
+    --fg: #22223B;
+    --muted: #4A4E69;
+    --line: #C9ADA7;
+    --accent: #4A4E69;
+    --accent-ink: #F2E9E4;
+    --blob1: #C9ADA7;
+    --blob2: #9A8C98;
+  }
+  body { background: var(--bg); color: var(--fg); }
+  .contact { background: #22223B; color: #F2E9E4; }
+  .contact h2, .contact .label { color: #F2E9E4; }
+  .btn.fill, .lang, .totop { background: #22223B; color: #F2E9E4; border-color: #22223B; }
+  .btn.ghost { color: #4A4E69; border-color: #9A8C98; }
+  .chip, .card, .window, .nav, .marquee, .idcard { background-color: #F8F2EE; }
+  .social { color: #22223B; }
+</style>
 </body></html>
